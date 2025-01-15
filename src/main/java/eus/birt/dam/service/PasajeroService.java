@@ -39,11 +39,11 @@ public class PasajeroService {
         try {            
             // Solicitar el nombre del pasajero al usuario
             System.out.println("Indica el nombre del pasajero:");
-            String nombre = keyboard.next();
+            String nombre = keyboard.nextLine();
             
             // Solicitar el email del pasajero al usuario
             System.out.println("Indica el email del pasajero:");
-            String email = keyboard.next();
+            String email = keyboard.nextLine();
 
             // Crear un nuevo objeto Pasajero con los datos proporcionados
             System.out.println("Creando un nuevo objeto pasajero...");

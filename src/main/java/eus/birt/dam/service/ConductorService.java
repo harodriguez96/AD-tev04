@@ -37,14 +37,14 @@ public class ConductorService {
         // Abrir una nueva sesión
         Session session = sessionFactory.openSession();
         
-        try {            
+        try {
             // Solicitar el nombre del conductor al usuario
             System.out.println("Indica el nombre del conductor:");
-            String nombre = keyboard.next(); 
+            String nombre = keyboard.nextLine(); 
 
             // Solicitar el vehículo que conduce al usuario
             System.out.println("Indica el vehiculo que se conduce:");
-            String vehiculo = keyboard.next(); 
+            String vehiculo = keyboard.nextLine(); 
             
             // Crear un nuevo objeto Conductor con los datos proporcionados
             System.out.println("Creando un nuevo objeto conductor...");

@@ -92,8 +92,9 @@ public class ReservaService {
 
             // Solicitar los nombres de los pasajeros y añadirlos a la lista
             for (int i = 1; i <= numPlazasReservadas; i++) {
+            	keyboard.nextLine(); //Limpiar el buffer
                 System.out.println("Indica el nombre del pasajero:");
-                name = keyboard.next();
+                name = keyboard.nextLine();
                 
                 // Buscar el pasajero en la base de datos
                 Query<Pasajero> query2 = session.createQuery("FROM Pasajero as p WHERE p.nombre = :nombre", Pasajero.class);
@@ -162,6 +163,7 @@ public class ReservaService {
             Query updateQuery = session.createQuery("UPDATE Pasajero SET reserva = null WHERE reserva.id = :id"); 
             updateQuery.setParameter("id", id); 
             updateQuery.executeUpdate();
+            
             
             // Actualizar el número de plazas disponibles en el viaje
             int plazasReservadas = unaReserva.getNumPlazasReservadas();

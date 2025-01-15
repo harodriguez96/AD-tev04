@@ -67,11 +67,11 @@ public class ViajeService {
         try {
             // Solicitar la ciudad de origen al usuario
             System.out.println("Indica la ciudad de origen:");
-            String origen = keyboard.next();
+            String origen = keyboard.nextLine();
             
             // Solicitar la ciudad de destino al usuario
             System.out.println("Indica la ciudad de destino:");
-            String destino = keyboard.next();
+            String destino = keyboard.nextLine();
             
             // Solicitar la fecha y hora del viaje al usuario y formatearla
             System.out.println("Indica la fecha y hora del viaje en formato dd-MM-yy:HH:mm (11-01-2025:09:00):");
@@ -83,9 +83,10 @@ public class ViajeService {
             System.out.println("Indica las plazas disponibles:");
             int plazas = keyboard.nextInt();
             
+            keyboard.nextLine(); //Limpiar el buffer
             // Solicitar el nombre del conductor al usuario
             System.out.println("Indica el nombre del conductor:");
-            String conductor = keyboard.next();
+            String conductor = keyboard.nextLine();
             
             // Buscar el conductor en la base de datos
             Query<Conductor> query1 = session.createQuery("FROM Conductor as c WHERE c.nombre = :nombre", Conductor.class);

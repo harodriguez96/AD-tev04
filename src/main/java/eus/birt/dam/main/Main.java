@@ -16,26 +16,33 @@ public class Main {
 		while (num < 8) {
 		    switch (num) {
 		        case 1:
+		        	keyboard.nextLine(); //Limpiar el buffer
 		            ConductorService.crearConductor(keyboard);
 		            break;
 		        case 2:
+		        	keyboard.nextLine(); //Limpiar el buffer
 		            ViajeService.crearViaje(keyboard);
 		            break;
 		        case 3:
 		        	System.out.println("Indica para cuantas personas se busca viaje:");
 		            int numPersonas = keyboard.nextInt();
+		            keyboard.nextLine(); //Limpiar el buffer
 		            ViajeService.buscarViajesDisponibles(numPersonas);
 		            break;
 		        case 4:
+		        	keyboard.nextLine(); //Limpiar el buffer
 		            PasajeroService.crearPasajero(keyboard);
 		            break;
 		        case 5:
+		        	keyboard.nextLine(); //Limpiar el buffer
 		            ReservaService.crearReserva(keyboard);
 		            break;
 		        case 6:
+		        	keyboard.nextLine(); //Limpiar el buffer
 		            ReservaService.cancelarReserva(keyboard);
 		            break;
 		        case 7:
+		        	keyboard.nextLine(); //Limpiar el buffer
 		            ViajeService.listarViaje();
 		            break;
 		        default:
